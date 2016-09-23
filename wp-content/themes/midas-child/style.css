@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-weight: 300;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 header {
@@ -63,30 +63,26 @@ ul.navmenu li:last-of-type a {
   width:100%;
 }
 
-ul.navmenu {
-  padding-top: 12px;
-}
-
-ul.navmenu li {
-  height: auto;
-}
-
-.logo_title {
-  margin-bottom: .5em;
-  padding-top: .3em;
+.header-pages {
+  padding: 50px 0;
+  background-color: #f8f8ff;
 }
 
 header {
-  background: #323232;
   min-height: auto;
   margin: 0;
   padding: 5px 0;
 }
 
+
 /*******************************/
 /**              LOGO             **/
 /*******************************/
 
+.logo_title {
+  margin-bottom: .5em;
+  padding-top: .3em;
+}
 
 /*******************************/
 /**         NAV MENU          **/
@@ -94,12 +90,28 @@ header {
 
  ul.navmenu li a {
     font-family: "Didact Gothic", sans-serif;
+    color: #323232;
   }
 
+ul.navmenu {
+  padding-top: 1px;
+}
+
+ul.navmenu li {
+  height: auto;
+}
+
+ul.navmenu.show {
+    display: block;
+    background: #f8f8ff; }
+
+.navicon {
+  color: #323232;
+}
 
 nav#flag-menu {
   right: 1.25rem;
-  top: 10px;
+  top: 45px;
   }
    @media only screen and (min-width: 1050px) {
     nav#flag-menu {
@@ -135,7 +147,7 @@ nav#flag-menu {
 a.button {
     background: none repeat scroll 0 0 #fac90e;
     color: #323232;
-    font-family: "Bitter", sans-serif;
+    font-family: "Didact Gothic", sans-serif;
     font-size: 2em;
     padding: 10px 50px;
     text-align: center;
@@ -203,7 +215,7 @@ a.button {
 /*******************************/
 
 
-.home-season, h3, h4 {
+.home-season h3, .home-season h4, .home-season p{
   margin: .3em .5em;
 }
 
@@ -212,12 +224,14 @@ a.button {
   text-align: center;
   margin-bottom: 0;
   background: #fac90e;
+  font-family: "Bitter", serif;
   margin: 1.15em .5em .5em .5em;
 }
 
 .home-season h3 {
   font-weight: 700;
   margin-top: 1em;
+  font-size: 1.6em;
 }
 
 .home-season span {
@@ -335,6 +349,7 @@ footer {
 
 .footer a, .footer a:link, .footer a:visited {
     color: #fac90e;
+    font-family: "Didact Gothic", sans-serif;
 }
 
 .footer .contact  a, a:link,  a:visited {
@@ -352,4 +367,168 @@ footer {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
+  margin-top: 60px;
+}
+
+.single-text {
+  padding: 2rem 1.25rem;
+}
+
+.cast-play li p:first-of-type {
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 700;
+  }
+
+.cast-play h2 {
+    font-size: 2.5em;
+    color: #323232;
+    margin-top: 0;
+    text-align: center;
+}
+
+
+/*******************************/
+/**   SHOW - ARCHIVE    **/
+/*******************************/
+
+.shows-list {
+  margin-top: 60px;
+}
+
+.shows-list a h1 {
+  color: #f8f8ff;
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: normal;
+}
+
+
+   @media only screen and (max-width: 450px) {
+      .shows-list a h1 {
+        font-size: 2.8em;
+      }
+    }
+
+.shows-list a {
+  background-size: cover;
+  background-position: center;
+}
+
+
+/*******************************/
+/**            ABOUT             **/
+/*******************************/
+
+.header-about {
+  width: auto;
+  padding: 0;
+  background-color: #f8f8ff;
+  background-size: contain;
+}
+
+@media only screen and (min-width: 300px) {
+   .header-about {
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+   .header-about {
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+   .header-about {
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+   .header-about {
+    background-size: cover;
+  }
+}
+
+
+.header-about h1 {
+  font-size: 7.5em;
+  color: #323232;
+}
+
+.team-list li p a {
+    color: #fac90e;
+    font-weight: 700;
+    font-family: "Didact Gothic", sans-serif;
+}
+
+.team-list li p {
+    font-family: "Didact Gothic", sans-serif;
+    font-size: 1.375rem;
+    font-weight: 300;
+    line-height: 2.5;
+    background: #f8f8ff;
+}
+
+
+hr.header-line {
+    background: #fac90e;
+}
+
+.single-text h3 {
+    font-size: 2.5em;
+    color: #323232;
+    margin-top: 0;
+    text-align: center;
+}
+
+.team-list h3 {
+    font-size: 2.5em;
+    color: #323232;
+    margin-top: 0;
+    text-align: center;
+}
+
+/*******************************/
+/**         CONTACT           **/
+/*******************************/
+.header-contact {
+  height: 350px;
+  width: auto;
+  background-size: cover;
+}
+
+.contact-info .c-icon {
+    width: 100%;
+    padding: .1rem 2.5rem;
+    background: #f8f8ff;
+    margin: 30px 0 0 0;
+}
+
+.contact-info .c-icon p {
+  font-family: "Didact Gothic", sans-serif;
+  color: #323232;
+}
+
+.contact-info .c-icon:last-of-type {
+    background: #f8f8ff;
+}
+
+@media only screen and (min-width: 650px) {
+  .contact-info .c-icon {
+      width: 45%;
+      float: left;
+  }
+  .contact-info .c-icon:last-of-type {
+    float: right;
+  }
+}
+
+
+/*******************************/
+/**       BUY TICKETS       **/
+/*******************************/
+
+.header-buytickets {
+  color: #323232;
+  margin-top: 0;
 }

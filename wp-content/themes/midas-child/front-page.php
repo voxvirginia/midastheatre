@@ -42,8 +42,8 @@
                                         } ?>
                                     <aside>
                                         <h3><?php echo $name; ?></h3>
-                                        <h4>by <span><?php echo $playwright; ?></span></h4>
-                                        <h4>directed by <span> <?php echo $director; ?></span></h4>
+                                        <p>by <span><?php echo $playwright; ?></span></p>
+                                        <p>directed by <span> <?php echo $director; ?></span></p>
                                     </aside>
                                     <div style="clear:both;"></div>
                                 </article>

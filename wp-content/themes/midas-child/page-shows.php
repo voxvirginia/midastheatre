@@ -7,45 +7,6 @@
 
 	<div class="site-content">
 
-    	<!-- <section class="clearfix header-pages">
-			<h1><span>The midas</span> <?php the_title(); ?></h1>
-			<p><?php the_field('header_line_1'); ?></p>
-			<p><?php the_field('header_line_2'); ?></p>
-		</section><!-- Promo -->
-
-		<section class="calendar clearfix">
-
-			<ul class="clearfix">
-				<li>
-					<ul class="cal-head sub-li clearfix">
-						<li>Show</li>
-						<li>Date</li>
-						<li>Time</li>
-						<li>Location</li>
-					</ul>
-				</li>
-				<?php if(get_field('show_calendar')): ?>
-
-				<?php while(has_sub_field('show_calendar')): ?>
-					<li>
-						<ul class="cal-body sub-li clearfix">
-							<li><!-- <a href="<?php the_sub_field('show_name_link'); ?>"> --><?php the_sub_field('show_name'); ?><!-- </a> --></li>
-							<li><?php the_sub_field('show_date'); ?></li>
-							<li><?php the_sub_field('show_time'); ?></li>
-							<li><a href="<?php the_sub_field('show_loc_link'); ?>" target="_blank"><?php the_sub_field('show_loc'); ?></a></li>
-						</ul>
-					</li>
-				<?php endwhile; ?>
-
-				<?php endif; ?>
-			</ul>
-
-			<a href="https://midas.timepad.ru">buy tickets</a>
-
-		</section>
-
-
-
 
 		<section class="shows-list clearfix">
 
