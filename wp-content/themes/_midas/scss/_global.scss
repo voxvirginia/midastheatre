@@ -1,0 +1,80 @@
+$s-size: 768px;
+$m-size: 1010px;
+$l-size: 1200px;
+
+$break-menu: 900px;
+$break-3-col-icon: 660px;
+$break-3-col: 1000px;
+$break-video: 850px;
+$break-test: 550px;
+$break-test-2: 960px;
+$break-padding: 1050px;
+$break-ipad: 769px;
+$break-map: 650px;
+$break-wrap: 1240px;
+
+
+
+$max-width: rem-calc(1200px); 
+
+$padding-small: rem-calc(20px);
+$padding-big: rem-calc(40px);
+
+
+
+$break-xsmall: rem-calc(400px);	// 25rem
+$break-small: rem-calc(600px);	// 37.5rem
+// $break-medium: rem-calc(1264px); 
+$break-big: rem-calc(1264px);	// 79rem
+
+// Colors
+$black: #323232; // #2b2828;
+$white: #fffff5; // #fffff5;
+$gold: #dcc88b;
+$red: #e52534;
+$red-dark: #ad2731;
+$blue: #16becf;
+$blue-dark: #128f9c;
+$grey-dark: #7b868e;
+$grey: #d5dbd8;
+$grey-light: #f8fbf4;
+
+//Typography
+$font-serif: 'Roboto Slab', serif;
+$font-sans: 'Roboto', sans-serif;
+$font-cond: 'Roboto Condensed', sans-serif;
+
+
+
+@mixin break($media) {
+  @if $media == menu {
+    @media only screen and (min-width: $break-menu) { @content; }
+  }
+  @else if $media == 3col-icon {
+    @media only screen and (min-width: $break-3-col-icon) and (max-width: $break-3-col - 1) { @content; }
+  }
+  @else if $media == 3col {
+    @media only screen and (min-width: $break-3-col) { @content; }
+  }
+  @else if $media == video {
+    @media only screen and (min-width: $break-video) { @content; }
+  }
+  @else if $media == test {
+    @media only screen and (min-width: $break-test) { @content; }
+  }
+  @else if $media == padding {
+    @media only screen and (min-width: $break-padding) { @content; }
+  }
+  @else if $media == test-2 {
+    @media only screen and (min-width: $break-test-2) { @content; }
+  }
+  @else if $media == ipad {
+    @media only screen and (min-width: $break-ipad) { @content; }
+  }
+  @else if $media == map {
+    @media only screen and (min-width: $break-map) { @content; }
+  }
+  @else if $media == wrap {
+    @media only screen and (min-width: $break-wrap) { @content; }
+  }
+}

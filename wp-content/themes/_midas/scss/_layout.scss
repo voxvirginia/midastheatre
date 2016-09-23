@@ -1,0 +1,1360 @@
+.wrapper {
+	width: 100%; /// rem-calc(1200px);
+	max-width: rem-calc(1200px);
+	margin: -$padding-big auto 0 auto;
+	z-index: 9999;
+
+	///
+	background: $white;
+	box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
+}
+
+header {
+	background: transparent;
+	position: absolute;
+	width: 100%;
+	margin: 40px auto;
+  	min-height : 80px;
+  	z-index: 9999;
+}
+
+.img-responsive {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+/*******************************/
+/**            LOGO           **/
+/*******************************/
+.logo_title {
+  float: left;
+  margin-right: 0;
+  margin-bottom: rem-calc(20px);
+  margin-left: $padding-small;
+
+  @include res-up(tablet) {margin-left: $padding-big;}
+}
+
+.logo {
+  margin-right: 1em;
+  vertical-align: top;
+  width: rem-calc(170px);
+}
+
+
+/*******************************/
+/**         NAV MENU          **/
+/*******************************/
+ul.navmenu {
+	font-size: 1rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+	white-space: nowrap;
+	clear: left;
+    display: none;
+    text-align: center;
+
+    &.show {
+		display: block;
+
+		///
+    	background: #323232;
+	}
+
+	@include break(menu) {
+		float: right;
+		display: inline-table;
+		margin-top: rem-calc(15px);
+		margin-right: $padding-small;
+		clear: none;
+		&:after {content: ""; clear: both; display: block;}
+		&.show {background: transparent;}
+	}
+
+	@include break(padding) {margin-right: $padding-big;}
+
+	li {
+		cursor: pointer;
+		list-style: none;
+		display: block;
+		position: relative;
+		padding: 0;
+		height: 80px;
+
+		&:last-of-type { a {color: $blue;} }
+
+		@include break(menu) {
+		    float: left;
+		    margin-right: rem-calc(30px);
+		    &:last-of-type {margin-right: 0;}
+		    &.current_page_item { a {font-size: rem-calc(18px);border-bottom: 2px solid $blue;} }
+		}
+
+		a {
+			text-decoration: none;
+			display: inline-block;
+			width: 100%; //
+		    line-height: rem-calc(80px);
+		    padding: 0 rem-calc(35px);
+		    font-family: $font-cond;
+		  	font-size: rem-calc(18px);
+		  	font-weight: 700;
+		  	text-transform: uppercase;
+			color: $white;
+			&:hover {font-size: rem-calc(26px);}
+
+    		@include break(menu) {padding: 0;line-height: rem-calc(25px);}
+
+    		
+
+			@include break(menu) {
+				&:hover, &.active {
+					font-size: rem-calc(18px);
+					border-bottom: 2px solid $blue;
+				}
+			}
+		}
+	}
+}
+
+.navicon {
+	float: right;
+	font-size: rem-calc(26px);
+	line-height: rem-calc(46px);
+	text-align: center;
+	margin: 0 rem-calc(32px) rem-calc(22px) 0;
+	cursor: pointer;
+
+	///
+	color: $white;
+
+	@include break(menu) {display: none;}
+}
+
+
+/*******************************/
+/**            HERO           **/
+/*******************************/
+
+.herounit {
+	width: 100%;
+	height: 550px;
+	position: relative;
+	text-align: center;
+	display: table;
+
+	&.hero-pages {height: 330px;}
+
+
+
+	///
+	background-image: url("images/hero-bg.jpg");
+	background-position: 50% 0%;
+	background-size: cover;
+	// background-attachment: fixed;
+	z-index: -1;
+
+	@include break(3col-icon) {height: 630px;}
+	@include res-up(tablet) {height: 670px;}
+
+	.herounit-content {
+		width: 80%;
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0 10%;
+	}
+
+	h1 {
+		font-size: em-calc(35px);
+		font-family: $font-sans;
+		line-height: 1.2;
+		letter-spacing: -1px;
+
+		///
+		color: $white;
+
+		@include res-up(tablet) {font-size: em-calc(55px);}
+	}
+}
+
+
+/*******************************/
+/**       3-COL-SECTION       **/
+/*******************************/
+.point h2 {
+  font-size: em-calc(22px); 
+}
+
+.point h2 i {
+  margin-right: 0.5em;
+
+  @include break(3col-icon) {
+  	float: left;
+	font-size: rem-calc(82px);
+	padding: 10px 0 50px 0;
+	width: 105px;
+  }
+}
+
+.pointlink {
+	font-weight: 700;
+	text-align: right;
+	
+	///
+	a {
+		color: $gold;
+		&:hover {
+			color: darken($gold, 10%);
+		}
+	}
+}
+
+.point-container {
+	display: block;
+	
+	@include break(3col) {
+		display: table;
+	}
+}
+
+.point {
+    width: 100%;
+    margin-right: 0;
+    padding: rem-calc(30px) 0;
+    float: none;
+    position: relative;
+
+    @include break(3col) {
+    	width: 33.33333333%;
+		float: none;
+		min-height: 306px;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+    ///
+	color: $white;
+
+    &:first-of-type {
+    	background: $blue;
+    }
+    &:nth-of-type(2) {
+    	background: darken($blue, 5%);
+    }
+    &:last-of-type {
+    	background: darken($blue, 10%);
+	}
+
+	.point-body {
+		width: 100%;
+		padding: $padding-big/2 $padding-small;
+		margin: 0 auto;
+		
+		@include break(3col-icon) {width: 80%;}
+		@include break(3col) {width: 100%;}
+		@include break(padding) {padding: $padding-big/2 $padding-big;}
+	}
+}
+
+
+/*******************************/
+/**           VIDEO           **/
+/*******************************/
+.welcome {
+
+	///
+	color: $black;
+	background: $gold;
+
+	a {
+		color: $white;
+
+		&:hover {
+			color: $blue;
+		}
+	}
+}
+
+.infovid {
+	height: 460px;
+
+	width: 100%;
+	margin-right: 0;
+	float: none;
+	position: relative;
+
+	///
+	background-position: 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: rgba(50, 50, 50, 0.15);
+
+	@include break(video) {width: 50%; float: left;}
+
+	.infoid-play {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		font-size: 4.375rem;
+		transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		font-size: rem-calc(70px);
+
+		a {
+			color: $blue;
+
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+}
+
+.infotext {
+	width: 100%;
+	float: right;
+	padding: $padding-big $padding-small;
+
+	h1 {
+		font-size: rem-calc(27px);
+		text-transform: uppercase;
+	}
+
+	@include break(video) {
+		width: 50%;
+  		float: right;
+  		margin-top: 70px;
+
+  		padding: $padding-small;
+
+  		h1 {
+    		margin-top: 0;
+  		}
+	}
+
+	@include break(padding) {
+		padding: 0 $padding-big;
+	}
+}
+
+
+/*******************************/
+/**      RECENT-ARTICLE       **/
+/*******************************/
+.recent-article {
+	
+	a {
+		display: block;
+		color: $white;
+		background-color: darken($blue, 5%);
+		background-position: 50%;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		& .a-tag {
+			margin-top: rem-calc(40px);
+			font-weight: 700;
+			text-transform: uppercase;
+
+			///
+			color: $gold;
+		}
+
+		h3 {
+			text-transform: uppercase;
+			font-size: em-calc(28px);
+			font-weight: 700;
+			margin-top: rem-calc(5px);
+		}
+
+		&:hover {
+			article {
+				background: $black;
+			}
+		}
+		
+		article {
+			padding: 30px $padding-small;
+			transition: background 0.5s ease-out;
+			
+			///
+			@include break(padding) {padding: 60px $padding-big;}
+		}
+	}
+}
+
+
+.post-nav {
+	///
+	background: $blue;
+	color: $white;
+	text-align: center;
+
+	.post-list {
+		width: 100%;
+
+		@include break(video) {width: 50%;float: left;}
+
+		&.float-right {
+			float: right;
+			background: darken($blue, 10%);
+		}
+
+		a {
+			color: $gold;
+
+			&:hover {
+				color: $white;
+			}
+		}
+
+		h3 {
+			margin: 0;
+			text-align: center;
+			text-transform: uppercase;
+			font-family: $font-cond;
+			line-height: rem-calc(75px);
+		}
+	}
+}
+
+
+/*******************************/
+/**          FEEDBACK         **/
+/*******************************/
+.feedback {
+  padding: rem-calc(52.8px) $padding-small/2 rem-calc(73.6px) $padding-small/2;
+
+  @include break(padding) {padding-right: $padding-big/2; padding-left: $padding-big/2;}
+
+  ///
+  background: $white;
+}
+
+
+.feedback h1 {
+	font-size: rem-calc(36px);
+	text-align: center;
+
+	@include break(big) {font-size: rem-calc(40px);}
+}
+
+.testimonial {
+	width: 100%;
+	margin-right: 0;
+	float: none;
+	margin-top: rem-calc(56px);
+
+	@include break(test) {
+	    width: 50%;
+	    float: left;
+	    margin-top: rem-calc(36.8px);
+	}
+
+	@include break(test-2) {
+		width: 25%;
+	}
+}
+
+
+.testimonial-body {
+  margin: 0 $padding-small/2;
+
+  @include break(padding) {margin: 0 $padding-big/2;}
+
+  ///
+  border-top: rem-calc(4px) solid $gold;
+}
+
+.says {
+  padding: 1em 0;
+  font-style: italic;
+}
+
+.source {
+	font-weight: bold;
+	text-align: right;
+	margin: rem-calc(16px) rem-calc(16px) 0 0;
+
+	///
+	color: $grey-dark;
+}
+
+
+
+
+/*******************************/
+/**         NEWSLETTER        **/
+/*******************************/
+.newsletter {
+	text-align: center;
+	padding: rem-calc(40px) $padding-small rem-calc(60px) $padding-small;
+
+  ///
+  
+  background: $blue;
+	
+	h1 {
+		color: $white;
+		font-size: 2.5em;
+
+		@include break(test) {font-size: 3em;}
+	}
+
+	p {
+		margin-bottom: $padding-small;
+		@include break(test) {margin-bottom: $padding-big;}
+	}
+
+	.mc4wp-form p {
+		margin-bottom: 0;
+	}
+
+	.mc4wp-alert {
+		margin-top: rem-calc(30px);
+	}
+
+  	input.form-control {
+  		width: 100%;
+  		max-width: 400px;
+    	font-size: rem-calc(18px);
+    	font-weight: 700;
+		line-height: 1.5;
+		display: block;
+		margin-top: 2rem;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 10px 10px 5px 0;
+		background: none;
+
+		///
+		border-bottom: 2px solid #fffff5;
+		color: $gold;
+		transition: all 0.5s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $gold;
+
+    }
+
+    &::-webkit-input-placeholder {
+	 	color: $white;
+    }
+  }
+}
+
+
+.btn {
+ 	display: inline-block;
+  	font-weight: 700;
+  	padding: 0.2em 1.5em 0 1.5em;
+  	line-height: 3em;
+  	margin: em-calc(36px) 0 0 0;
+  	border: none;
+
+  	@include break(video) {
+		font-size: rem-calc(20px);
+  	}
+
+  	///
+  	color: $blue;
+	background: $white;
+	transition: all 0.5s ease;
+	
+	&:hover{
+		color: $gold;
+  	}
+}
+
+
+/*******************************/
+/**         AD-FRIENDS        **/
+/*******************************/
+.ad-friends {
+	background:url('/wp-content/themes/midas/images/banana_img.jpg') 50%;
+	background-size: cover;
+
+	color:#fffff5;
+	padding: 0 $padding-small 2rem $padding-small;
+
+	img {
+		display: none;
+		@include break(test) {display:inline-block;max-width: 200px;margin-top: 2rem;float: left;margin-right: 2rem;}
+	}  
+	
+	@include break(padding) {padding: 0 $padding-big 2rem $padding-big;}
+
+	a {
+		color: $gold;
+
+		&:hover {
+			color: $white;
+		}
+	}
+}
+
+
+/*******************************/
+/**          FOOTER           **/
+/*******************************/
+.footer {
+	text-align: center;
+	width: 100%;
+
+	///
+	background-color: $black;
+	color: $gold;
+
+	@include break(video) {
+		.foo-container {
+			max-width: rem-calc(1200px);
+			margin: 0 auto;
+		}
+	}
+
+	a,
+	a:link,
+	a:visited {
+		color: $gold;
+
+		&:hover,
+		&:active {
+			color: $white;
+		}
+	}
+
+	.social {
+		margin: rem-calc(80px) 0;
+
+		a {	
+			font-size: em-calc(48px);
+			text-align: center;
+			display: inline-block;
+			margin-right: rem-calc(80px);
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+
+	hr {
+		display: none;
+	}
+
+	.contact  {
+		margin-bottom: rem-calc(80px);
+
+		@include break(video) {
+			width: 50%;
+			float: left;
+			text-align: left;
+			padding-left: $padding-small;
+		}
+
+		@include break(padding) {padding-left: $padding-big}
+		@include break(wrap) {padding-left: 0}
+
+		a {font-weight: bold; display: inline-block;}
+		
+		i {
+			display: block;
+
+			@include break(video) {
+				display: inline-block;
+				margin-right: rem-calc(10px);
+			}
+		}
+	}
+
+	.contact-phone {
+		margin-bottom: rem-calc(20px);
+
+		@include break(video) {margin-bottom: 0;}
+	}
+
+	.copyright {
+		margin: rem-calc(40px);
+
+		@include break(video) {
+			width: 50%;
+			float: right;
+			text-align: right;
+			margin: 0;
+			padding-right: $padding-small;
+		}
+
+		@include break(padding) {padding-right: $padding-big}
+		@include break(wrap) {padding-right: 0}
+
+		p {font-size: rem-calc(16px);}
+		a {color: $white; font-style: italic;}
+	}
+}
+
+
+///////////////////////////////////////////////////////////////////
+
+
+/*******************************/
+/**							  **/
+/**          HEADER           **/
+/**							  **/
+/**	SHOWS NEWS ABOUT CONTACTS **/
+/**	----- ---- ----- -------- **/
+/*******************************/
+
+.header-pages {
+	text-align: center;
+	padding: 50px $padding-small 80px $padding-small;
+	@include break(padding) {padding: 50px $padding-big 80px $padding-big;}
+	
+	h1 {
+		text-transform: uppercase;
+
+		span {
+			color: $gold;
+		}
+	}
+
+	///
+	background: $blue;
+	color: $white;
+
+	p > span {
+		font-weight: bold;
+	}
+}
+
+hr.header-line {
+	width: 110px;
+	height: 4px;
+	margin: rem-calc(38px) auto;
+
+	background: $gold;
+}
+
+.cast-play,
+.s-s-calendar,
+.location {
+
+	h2 {
+		text-transform: uppercase;
+		font-size: rem-calc(30px);
+		font-weight: 700;
+	}
+}
+
+
+/*******************************/
+/**							  **/
+/**         CALENDAR          **/
+/**							  **/
+/**	SHOWS NEWS ABOUT CONTACTS **/
+/**	-----					  **/
+/*******************************/
+
+.calendar {
+	background: $gold;
+	padding: $padding-small;
+	text-align: center;
+
+	@include break(padding) {padding: $padding-big;}
+
+	& > ul {
+		background: none;
+		width: 100%;
+		margin: $padding-small auto 0 auto;
+		text-align: center;
+
+		@include break(padding) {margin: $padding-big auto 0 auto;}
+	}
+
+	& > a {
+		display: block;
+		padding-bottom: $padding-small; 
+		text-decoration: underline;
+		color: $white;
+		&:hover {color: rgba($black, 0.9);}
+	}
+}
+
+ul.sub-li {
+
+	&.cal-head {display: none;}
+	
+	&.cal-body {
+		padding-top: 5px;
+		font-size: em-calc(22px);
+		font-weight: 900;
+		line-height: 2;
+		margin: $padding-big 0;
+		background: rgba($black, 0.05);
+
+		&:first-of-type {
+			margin-top: 20px;
+		}
+	}
+
+	@include break(ipad) {
+		&.cal-head {
+			font-size: em-calc(19px);
+			font-family: $font-cond;
+			font-weight: 100;
+			text-transform: uppercase;
+			display: block;
+		}
+		&.cal-body{font-size: em-calc(28px);}
+	}
+
+	li {
+		display: inline-block;
+		width: 33.333333333%;
+		float: left;
+
+		&:first-of-type {
+			width: 100%;
+		}
+
+		@include break(ipad) {width: 20%;&:first-of-type {width: 40%;}}
+
+		a {
+			color: $white;
+			font-weight: 900;
+
+			&:hover {
+				color: rgba($black, 0.9);
+			}
+		}
+	}
+}
+
+
+/*******************************/
+/**							  **/
+/**        SHOWS LIST         **/
+/**							  **/
+/**	SHOWS NEWS ABOUT CONTACTS **/
+/**	-----					  **/
+/*******************************/
+
+.shows-list {
+	
+	.sl-item {
+		text-align: center;
+		
+		///
+		background: $black;
+		
+		a {
+			display: block;
+		}
+	}
+
+	a {
+		color: $white;
+		& .a-tag {
+			margin-top: rem-calc(40px);
+			font-weight: 700;
+			text-transform: uppercase;
+
+			///
+			color: $gold;
+		}
+
+		h1 {
+			text-transform: uppercase;
+			font-size: em-calc(55px);
+			font-weight: 700;
+			margin-top: rem-calc(5px);
+		}
+
+		p.a-tag {
+			color: $red;
+		}
+
+		&:hover {
+			article {
+				background: $black;
+			}
+		}
+		
+		article {
+			padding: 4.5rem $padding-small;
+			transition: background 0.5s ease-out;
+
+			@include break(padding) {padding: 6.5rem $padding-big;}
+		}
+	}
+}
+
+
+/*******************************/
+/**							  **/
+/**         TEXT AREA         **/
+/**							  **/
+/**     	ALL PAGES         **/
+/**	        ---------		  **/
+/*******************************/
+
+.single-text {
+	max-width: rem-calc(840px);
+	margin: 0 auto;
+	padding: $padding-big*2 $padding-small;
+
+	p {
+		font-size: rem-calc(20px);
+		font-weight: 300;
+		line-height: 1.5;
+		margin-bottom: $padding-big/2;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	h2, h3 {
+		margin: $padding-big 0 $padding-big/4 0;
+	}
+
+	h3 {
+		color: $grey-dark;
+	}
+
+	img {
+		margin: 0 0 $padding-big/2 0;
+
+		&.alignleft {
+			display: inline;
+			float: left;
+		}
+
+		&.alignright {
+			display: inline;
+			float: right;
+		}
+
+		&.aligncenter {
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		&:first-of-type {
+			margin-top: $padding-big/2;
+		}
+	}
+
+	a {
+		text-align: center;
+		margin-top: $padding-big;
+		color: $blue;
+
+		&:hover {
+			color: $black;
+		}
+	}
+}
+
+
+/*******************************/
+/**							  **/
+/**       CAST OF PLAY        **/
+/**							  **/
+/**	SHOWS NEWS ABOUT CONTACTS **/
+/**	-----					  **/
+/*******************************/
+
+.cast-play {
+	text-align: center;
+	padding: $padding-big 0 0 0;
+
+	///
+	background: $grey;
+
+	li {
+		width: 50%;
+		min-height: rem-calc(130px);
+		float: left;
+		margin-bottom: $padding-big;
+		
+		@include break(map) {width: 33.333333333%;}
+		@include break(ipad) {width: 25%;}
+		
+		p {
+			font-family: $font-cond;
+			font-size: rem-calc(22px);
+			font-weight: 300;
+
+			&:first-of-type {
+				font-weight: 700;
+			}
+
+		}
+
+	}
+}
+
+.s-s-photo {
+	width: 100%;
+	height: 400px;
+
+	background-position: 50%;
+	background-size: cover;
+}
+
+
+/*******************************/
+/**							  **/
+/**      CALENDAR SINGLE      **/
+/**							  **/
+/**	SHOWS NEWS ABOUT CONTACTS **/
+/**	-----					  **/
+/*******************************/
+
+.s-s-calendar {
+	padding: $padding-small;
+	text-align: center;
+
+	@include break(padding) {padding: $padding-big;}
+
+	h2 span {
+		color: $white;
+	}
+
+	hr.header-line {
+		background: $white;
+	}
+
+	ul.sub-li li {
+		width: 33.33333333%;
+	}
+
+	a {
+		color: $white;
+
+		&:hover {
+			color: $grey-dark;
+		}
+	}
+
+	///
+	background: $gold;
+}
+
+
+/*******************************/
+/**							  **/
+/**         TEAM LIST         **/
+/**							  **/
+/**	SHOWS NEWS ABOUT CONTACTS **/
+/**			   -----		  **/
+/*******************************/
+
+.team-list {
+	text-align: center;
+	padding: $padding-big $padding-small/2;
+	@include break(padding) {padding: $padding-big $padding-big/2;}
+
+	///
+	background: $grey;
+
+	ul {
+		margin-top: $padding-big;
+	}
+
+	li {
+		width: 100%;
+		margin-bottom: $padding-small;
+		padding: 0 $padding-small/2;
+		
+		img {width: 0px; transition: all 1s ease;}
+		&:hover img {width: 100%;}
+		
+		@include break(test) {
+			width: 50%;
+			float: left;
+			min-height: rem-calc(130px);
+			margin-bottom: $padding-big;
+
+			img {width: 100%; display: inline-block;}
+			&:hover img {width: 100%;}
+		}
+		@include break(test-2) {width: 33.33333333%; float: left;}
+		@include break(padding) {padding: 0 $padding-big/2;}
+
+		// &:nth-of-type(4n+4) {
+		// 	float: right;
+
+		// 	// Need to read in bootstrap!!!!
+		// }
+		
+		p {	
+			font-family: $font-cond;
+			font-size: rem-calc(22px);
+			font-weight: 300;
+			line-height: 2.5;
+			cursor: pointer;
+			
+			@include break(test) {
+				cursor: default;
+			}
+			
+			///
+			background: $white;
+		}
+	}
+}
+
+
+/*******************************/
+/**							  **/
+/**         BLOG MAIN         **/
+/**							  **/
+/**	SHOWS NEWS ABOUT CONTACTS **/
+/**		  ----  			  **/
+/*******************************/
+
+.blog-main {
+	width: 100%;
+	position: relative;
+
+	.recent-article {
+		width: 100%;
+
+		@include break(3col) {padding-right: 300px;}
+	}
+
+	.b-p-aside {
+		width: 100%;
+		height: 100%;
+		overflow-y: scroll;
+
+		&::-webkit-scrollbar {display: none;}
+		
+		///
+		color: $white;
+		background: $gold;
+		box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
+
+		@include break(3col) {
+			width: 300px;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+
+		/// Make shadows only on the left side
+	}
+}
+
+.b-pagination {
+	width: 100%;
+	margin: $padding-big/2 0;
+
+	@include break(3col) {padding-right: 300px;}
+
+	nav {
+		display: table;
+		margin: 0 auto;
+	}
+
+	li {
+		display: inline;
+		margin-right: $padding-big/2;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		span.current {
+			color: $black;
+		}
+
+		a {
+			font-weight: 700;
+			color: $gold;
+
+			&:hover {
+				color: $blue;
+			}
+			
+		}
+	}
+}
+
+.b-p-aside {
+	h3 {
+		margin: $padding-big/2 $padding-small 0 $padding-small;
+		font-size: rem-calc(24px);
+		font-family: $font-cond;
+		text-transform: uppercase;
+
+		@include break(3col) {margin: $padding-big $padding-big 0 $padding-big;}
+
+		///
+		color: $black; 
+	}
+
+	hr.header-line {
+		width: auto;
+		margin: rem-calc(15px) $padding-small $padding-big/2 $padding-small;
+		
+		@include break(3col) {margin: rem-calc(15px) $padding-big $padding-big/2 $padding-big;}
+
+		///
+		background: $white;
+	}
+
+	div.widget_archive ul {
+		margin-left: $padding-small;
+
+		@include break(3col) {margin-left: $padding-big;}
+
+		li {
+			width: 50%;
+			float: left;
+
+			@include break(ipad) {width: 25%;}
+			@include break(3col) {width: 100%; float: none;}
+		}
+
+		a {
+			color: $black;
+
+			&:hover {
+				color: $blue;
+			}
+		}
+	}
+
+	.null-instagram-feed {
+		margin-top: $padding-big/2;
+		
+
+		ul a {
+			display: block;
+			line-height: 0;
+		}
+		
+		p {
+			margin-top: 1rem;
+			text-align: center;
+
+			a {
+				color: $white;
+				font-weight: 900;
+				text-decoration: underline;
+				
+				&:hover {
+					color: $black;	
+				}
+			}
+		}
+	}
+}
+
+.null-instagram-feed li {
+	float: left;
+	width: 50%;
+
+	@include break(test) {width: 25%;}
+	@include break(3col) {width: 50%;}
+
+	img {
+		opacity: 0.7;
+		transition: all 0.5s ease;
+		-webkit-filter: grayscale(1);
+  		filter: grayscale(1);
+	}
+
+	a:hover img {
+		-webkit-filter: grayscale(0);
+  		filter: grayscale(0);
+  		opacity: 1;
+	}
+}
+
+
+/*******************************/
+/**							  **/
+/**         LOCATION          **/
+/**							  **/
+/**	SHOWS NEWS ABOUT CONTACTS **/
+/**		             -------- **/
+/*******************************/
+
+.contact-info {
+	text-align: center;
+
+	///
+	color: $white;
+
+	.c-icon {
+		width: 100%;
+		padding: $padding-big;
+		background: darken($blue, 5%);
+
+		@include break(map) {width: 50%;float: left;}
+		@include break(video) {
+			p {font-size: rem-calc(22px);}
+			i {font-size: rem-calc(115px);}
+		}
+
+		p {
+			font-weight: 700;
+		}
+
+		i {
+			font-size: rem-calc(55px);
+		}
+
+		&:last-of-type {
+			float: right;
+			background: darken($blue, 10%);
+		}
+	}
+}
+
+.location {
+	text-align: center;
+	padding: $padding-big 0 0 0;
+
+	.loc {
+		width: 100%;
+		margin-bottom: 6rem;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	.loc-map {
+		margin-top: $padding-small;
+	}
+
+	.loc-info {
+		a {
+			color: $blue;
+		}
+	}
+
+	.loc-info,
+	.loc-map {
+		width: 100%;
+
+		@include break(ipad) {width: 50%; float: left; margin-top: 0;}
+	}
+
+}
+
+
+

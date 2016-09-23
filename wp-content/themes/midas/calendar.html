@@ -1,0 +1,41 @@
+<?php
+		
+			$value = get_field( "display_calendar" );
+		
+			if( $value == true ) { ?>
+		    
+		    <section class="s-s-calendar clearfix" id="show-calendar">
+
+				<h2>Calendar of <span><?php the_title(); ?></span></h2>
+				<hr class="header-line">
+
+				<ul class="clearfix">
+					<li>
+						<ul class="cal-head sub-li clearfix">
+							<li>Date</li>
+							<li>Time</li>
+							<li>Location</li>
+						</ul>
+					</li>
+					
+					<?php if(get_field('show_calendar')): ?>
+
+					<?php while(has_sub_field('show_calendar')): ?>
+						<li>
+							<ul class="cal-body sub-li clearfix">
+								<li><?php the_sub_field('show_date'); ?></li>
+								<li><?php the_sub_field('show_time'); ?></li>
+								<li><a href="<?php the_sub_field('show_loc_link'); ?>">"<?php the_sub_field('show_loc'); ?>"</a></li>
+							</ul>
+						</li>
+					<?php endwhile; ?>
+
+					<?php endif; ?>
+
+				</ul>
+
+				<a href="/buy-tickets/">buy tickets</a>
+
+			</section>
+
+		<?php } else {} ?>

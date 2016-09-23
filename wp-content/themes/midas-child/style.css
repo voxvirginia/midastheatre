@@ -1,0 +1,355 @@
+/*
+Theme Name: The MIDAS Theatre - Child Theme
+Theme URI: http://themidastheatre.com
+Author: Virginia Robinson
+Author URI: http://virginiarobinson.com
+Template:  midas
+Description: The MIDAS Theatre Website Template.
+Version: 2.0
+Text Domain: themidastheatre
+*/
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-family: "Didact Gothic", serif;
+}
+
+p {
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  top: 0;
+}
+
+body, footer {
+  background-color: #f8f8ff;
+}
+
+.site-content {
+  width:95%;
+  margin:auto;
+  padding:0 10px;
+  max-width: 70rem;
+}
+
+/*******************************/
+/**         Teal-->Gold          **/
+/*******************************/
+ul.navmenu li:last-of-type a {
+    color: #fac90e; }
+
+    @media only screen and (min-width: 900px) {
+        ul.navmenu li.current_page_item a {
+          border-bottom: 2px solid #fac90e; }
+        ul.navmenu li a:hover, ul.navmenu li a.active {
+          border-bottom: 2px solid #fac90e; }
+        }
+
+/*******************************/
+/**            HEADER           **/
+/*******************************/
+
+.header_photo {
+  width:100%;
+}
+
+ul.navmenu {
+  padding-top: 12px;
+}
+
+ul.navmenu li {
+  height: auto;
+}
+
+.logo_title {
+  margin-bottom: .5em;
+  padding-top: .3em;
+}
+
+header {
+  background: #323232;
+  min-height: auto;
+  margin: 0;
+  padding: 5px 0;
+}
+
+/*******************************/
+/**              LOGO             **/
+/*******************************/
+
+
+/*******************************/
+/**         NAV MENU          **/
+/*******************************/
+
+ ul.navmenu li a {
+    font-family: "Didact Gothic", sans-serif;
+  }
+
+
+nav#flag-menu {
+  right: 1.25rem;
+  top: 10px;
+  }
+   @media only screen and (min-width: 1050px) {
+    nav#flag-menu {
+      right: 2.5rem;
+    }
+  }
+
+/*******************************/
+/**            HERO               **/
+/*******************************/
+
+.herounit {
+  z-index: 1;
+  height: 30%;
+  margin-top: 51px;
+}
+
+.herounit .herounit-content{
+  padding-top: 2%;
+}
+
+.herounit-content h1 {
+    font-family: "Bitter", serif;
+    margin: 0;
+    text-align: bottom;
+  }
+
+.herounit-content h2 {
+  color: white;
+  margin: 0 0 45px 0;
+}
+
+a.button {
+    background: none repeat scroll 0 0 #fac90e;
+    color: #323232;
+    font-family: "Bitter", sans-serif;
+    font-size: 2em;
+    padding: 10px 50px;
+    text-align: center;
+    display: inline;
+}
+
+/*making hero font sizes responsive*/
+    @media only screen and (min-width: 240px) {
+      .herounit .herounit-content{
+        height: 300px;
+      }
+      .herounit-content h1 {
+        display:none;
+      }
+      .herounit-content h2 {
+        font-size: 1.5em;
+      }
+      a.button {
+        font-size: 1.2em;
+        padding: 4px 20px;
+      }
+    }
+        @media only screen and (min-width: 450px) {
+      .herounit-content h1 {
+        font-size: 2.5em;
+        display: block;
+      }
+      a.button {
+        font-size: 1.5em;
+        padding: 8px 40px;
+      }
+    }
+   @media only screen and (min-width: 600px) {
+      .herounit-content h1 {
+        font-size: 3.5em;
+      }
+      .herounit .herounit-content{
+        height: 350px;
+      }
+      a.button {
+        font-size: 1.8em;
+        padding: 10px 50px;
+      }
+    }
+   @media only screen and (min-width: 800px) {
+      .herounit-content h1 {
+        font-size: 5em;
+      }
+      .herounit-content h2 {
+        font-size: 1.9em;
+      }
+    }
+    @media only screen and (min-width: 1122px) {
+      .herounit-content h1 {
+        font-size: 6em;
+      }
+      .herounit-content h2 {
+        font-size: 1.9em;
+      }
+    }
+
+
+/*******************************/
+/**         HOMEPAGE        **/
+/*******************************/
+
+
+.home-season, h3, h4 {
+  margin: .3em .5em;
+}
+
+
+.home-season h2 {
+  text-align: center;
+  margin-bottom: 0;
+  background: #fac90e;
+  margin: 1.15em .5em .5em .5em;
+}
+
+.home-season h3 {
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+.home-season span {
+  color: #fac90e;
+  font-weight: 700;
+}
+
+p.between-seasons  {
+  text-align: center;
+  margin: 80px 50px 0px 50px;
+}
+
+.image-left aside {
+    float: left;
+    width: 60%;
+    height: auto;
+}
+
+.image-left img {
+    float: left;
+    margin: 1em;
+    max-width: 30%;
+    vertical-align: middle;
+}
+
+.image-right aside {
+    float: right;
+    width: 60%;
+    text-align: right;
+}
+
+.image-right img {
+    float: right;
+    margin: 1em;
+    max-width: 30%;
+    vertical-align: middle;
+}
+
+
+   @media only screen and (max-width: 400px) {            /*making season announcement responsive*/
+      .image-right img {
+        display:none;
+      }
+      .image-left img {
+        display:none;
+      }
+      .image-right aside {
+        width: 100%;
+      }
+      .image-left aside {
+        width: 100%;
+      }
+    }
+
+   @media only screen and (max-width: 500px) {
+      .home-season h4 {
+        font-size: 1em;
+      }
+      .home-season h3 {
+        font-size: 1.3em;
+      }
+      .home-season h2 {
+        font-size: 1.8em;
+      }
+      .image-right img {
+        margin: .5em;
+        margin-top: 1em;
+      }
+      .image-left img {
+        margin: .5em;
+        margin-top: 1em;
+      }
+    }
+
+
+div.left-hand-box {
+    float: left;
+    width: 100%;
+    height: 280px;
+    background-color: purple;
+    margin: 41px 0 0 0;
+  }
+
+
+   @media only screen and (min-width: 800px) {       /*making front layout responsive*/
+      div.home-season-container  {
+        width: 50%;
+        float: right;
+        min-height: 600px;
+      }
+      div.left-hand-box {
+        width: 45%;
+      }
+    }
+
+
+
+
+
+/*******************************/
+/**            FOOTER           **/
+/*******************************/
+
+footer {
+  color: #323232;
+}
+
+.footer .social {
+    margin: 1rem 0;
+}
+
+.footer .contact {
+    margin-bottom: 1rem;
+}
+
+.footer a, .footer a:link, .footer a:visited {
+    color: #fac90e;
+}
+
+.footer .contact  a, a:link,  a:visited {
+    color: #323232;
+}
+
+
+
+
+/*******************************/
+/**     SHOW - SINGLE     **/
+/*******************************/
+
+.header-pages  {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
