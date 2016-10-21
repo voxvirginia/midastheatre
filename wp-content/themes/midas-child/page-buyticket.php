@@ -9,11 +9,14 @@
 
     	<section class="clearfix header-pages header-buytickets">
 
+    		<?php if (have_posts()) : while (have_posts()) : the_post();?>
+
 			<h1><?php the_title(); ?></h1>
 			<hr class="header-line">
 			<script type="text/javascript" defer="defer" charset="UTF-8" data-timepad-customized="19811" data-timepad-widget-v2="event_list3" src="https://timepad.ru/js/tpwf/loader/min/loader.js"></script>
-			<p><?php the_field('header_line_1'); ?></p>
-			<p><?php the_field('header_line_2'); ?></p>
+			<p><?php the_content(); ?></p>
+
+		<?php endwhile; endif; ?>
 
 		</section><!-- Promo -->
 
