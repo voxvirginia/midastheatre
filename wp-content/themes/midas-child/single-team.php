@@ -5,7 +5,7 @@
 
 		<section class="single-text clearfix">
 			<?php if (have_posts()) : while (have_posts()) : the_post();?>
-				<h1><?php the_title(); ?></h1>
+				<h1 class="name-single-team"><?php the_title(); ?></h1>
 				<hr class="header-line" style="width: 100%;">
 				<?php the_content(); ?>
 			<?php endwhile; endif; ?>

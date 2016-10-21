@@ -125,8 +125,8 @@ nav#flag-menu {
 
 .herounit {
   z-index: 1;
-  height: 30%;
-  margin-top: 51px;
+  height: 100%;
+  margin-top: 75px;
 }
 
 .herounit .herounit-content{
@@ -193,6 +193,9 @@ a.button {
       }
     }
    @media only screen and (min-width: 800px) {
+      .herounit {
+        height: 450px;
+      }
       .herounit-content h1 {
         font-size: 5em;
       }
@@ -356,7 +359,13 @@ footer {
     color: #323232;
 }
 
-
+.footer a:hover, .footer a:active,
+.footer a:link:hover,
+.footer a:link:active,
+.footer a:visited:hover,
+.footer a:visited:active {
+    color: #323232;
+}
 
 
 /*******************************/
@@ -367,7 +376,7 @@ footer {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .single-text {
@@ -392,7 +401,7 @@ footer {
 /*******************************/
 
 .shows-list {
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .shows-list a h1 {
@@ -487,6 +496,15 @@ hr.header-line {
     margin-top: 0;
     text-align: center;
 }
+
+/*******************************/
+/**     TEAM - SINGLE      **/
+/*******************************/
+
+h1.name-single-team {
+  margin: 1em 0 .5em 0;
+}
+
 
 /*******************************/
 /**         CONTACT           **/

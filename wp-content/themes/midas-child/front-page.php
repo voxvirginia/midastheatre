@@ -56,23 +56,21 @@
         </div>
     </section>
 
-<section class = "home-short-order">
+<section class = "home-project">
     <div class="site-content">
+             <?php query_posts('posts_per_page=2&post_type=project'); ?>
+                <?php while ( have_posts() ) : the_post();
+                     $image_project = get_field('front_page_image');
+                     $size = "large";
+                ?>
         <div class = "left-hand-box">
-            <p>HI I AM TESTING!</p>
+            <a href="<?php the_permalink(); ?>">
+                <?php if($image); {
+                    echo wp_get_attachment_image( $image_project, $size );
+                } ?>
+            </a>
         </div>
-
-
-    </div>
-</section>
-
-<section class = "home-short-order">
-    <div class="site-content">
-        <div class = "left-hand-box">
-            <p>Box Number 2!</p>
-        </div>
-
-
+        <?php endwhile; ?>
     </div>
     <div style="clear:both;"></div>
 </section>
